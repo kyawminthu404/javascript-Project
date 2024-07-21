@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sneaker Shop</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/dist/output.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-white overflow-x-hidden">
+
+  <div class="flex flex-col">
+    <header class="sticky top-0 z-10 bg-white shadow-sm shadow-black-dark">
+      <section class="flex justify-between gap-2 items-center px-3 md:px-6 lg:px-10">
+        <h1 class="text-[2rem] font-secondaryFont font-semibold md:text-[2.2rem] lg:text-[2.5rem]">Vibe<span class="text-[2.5rem] font-thirdFont text-red-800 md:text-[3rem] lg:text-[3.5rem]">X</span></h1>
+
+        <div class="hidden md:flex md:relative md:font-secondaryFont lg:flex">
+          <div class="absolute p-2 bg-red-600 text-dull-white  rounded-full flex justify-center items-center top-1 left-1">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <input type="text" placeholder="Search" class="w-full md:w-[28rem] lg:w-[28rem] px-12 py-2 rounded-2xl bg-white-light shadow-sm shadow-black-dark focus:outline-none focus:ring-1 focus:ring-black-dark focus:bg-black-dark focus:drop-shadow-lg placeholder:text-slate-500"/>
+        </div>
+
+        <ul class="hidden lg:flex lg:justify-center lg:items-center lg:gap-6 lg:font-secondaryFont">
+          <li>
+            <a href="#home" class="ease-linear duration-200 cursor-pointer font-secondaryFont hover:opacity-90">Home</a>
+          </li>
+          <li>
+            <a href="#products" class="ease-linear duration-200 cursor-pointer font-secondaryFont hover:opacity-90">Products</a>
+          </li>
+          <li>
+            <a href="checkout.html" class="ease-linear duration-200 cursor-pointer font-secondaryFont hover:opacity-90 js-cart-quantity">Carts(0)</a>
+          </li>
+          <li>
+            <a href="#contact" class="ease-linear duration-200 cursor-pointer font-secondaryFont hover:opacity-90">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="hidden lg:flex lg:gap-2 lg:justify-center lg:items-center">
+          <a href="#" class="ease-linear duration-200 border border-black hover:bg-black-dark px-3 py-1 rounded-xl font-secondaryFont cursor-pointer hover:opacity-90"> Login </a>
+          <button class="rounded-xl px-3 py-1 border border-black-dark bg-red-600 text-white font-secondaryFont cursor-pointer hover:bg-red-500"> Sign Up </button>
+        </div>
+      
+        <div id="side-bar" class="text-[2rem] md:text-[2rem] lg:hidden cursor-pointer">
+          <i class="fa-solid fa-bars-progress"></i>
+        </div>
+      </section>  
+
+      <section id="mobile-view" class="absolute top-0 w-full min-h-[100%] bg-white hidden flex-col justify-center font-secondaryFont shadow-md shadow-black-dark rounded-3xl">
+      
+        <div id="close-item" class="flex justify-between items-center shadow-sm  shadow-black-dark">
+          <h1 class="text-[2rem] font-secondaryFont font-semibold md:text-[2.2rem] px-3 md:px-6 ">Vibe<span class="text-[2.5rem] font-thirdFont text-red-800 md:text-[3rem]">X</span></h1>
+          <i class="fa-solid fa-circle-xmark self-end px-2.5 pt-3 pb-3 text-[2.2rem] md:text-[2rem] md:px-[1.5rem] md:py-5 cursor-pointer"></i>
+        </div>
+
+        <div class="flex justify-center items-center relative origin-top animate-open-menu">
+          <img src="image/nikeLogo.png" alt=""  width="500" class="absolute top-0 z-[2]">
+        </div>
+
+        <ul id="list-item" class="flex flex-col items-center py-10 z-10 text-2xl cursor-pointer origin-top animate-open-menu">
+          <li class="py-6">
+            <a href="#home" class="w-full  text-center font-semibold hover:opacity-90"> Home </a>
+          </li>
+
+          <li class="py-6">
+            <a href="#products" class="w-full text-center font-semibold hover:opacity-90"> Products </a>
+          </li>
+
+          <li class="py-6">
+            <a href="checkout.html" class="w-full text-center font-semibold hover:opacity-90 js-cart-quantity-mobile"> Carts(0) </a>
+          </li>
+
+          <li class="py-6">
+            <a href="#contact" class="w-full text-center font-semibold hover:opacity-90"> Contact </a>
+          </li>
+        </ul>
+      </section>
+    </header>
+
+    <main>
+      <section id="home" class="mb-6 lg:flex lg:flex-row lg:px-6 scroll-mt-20">
+        <div class="flex justify-center items-center lg:flex-1 lg:order-2 lg:justify-end lg:items-start img-transform"> 
+          <img src="image/foto.png" alt="foto1" class="h-[400px] drop-shadow-[3rem] md:h-[500px] lg:h-[600px]">
+        </div>
+        <div class="p-4 space-y-6 text-left mt-10 md:space-y-8 lg:flex-1 lg:order-1 lg:mt-20 home-text-transform">
+          <h1 class="font-secondaryFont text-6xl md:text-8xl">Welcome!</h1>
+          <p class="font-secondaryFont text-lg text-black-more text-left md:leading-7"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis perferendis, incidunt ex exercitationem esse nemo aperiam temporibus voluptatum molestiae porro itaque ea eum, reiciendis fugit aliquid iusto quasi, saepe Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo sapiente iure voluptatibus.</p>
+          <form action="" class="flex flex-col gap-4 md:flex-row md:gap-0"> 
+            <div class="relative">
+              <div class="absolute top-1 left-1 p-2 bg-white-light rounded-full flex justify-center items-center">
+                <i class="fa-solid fa-shoe-prints"></i>
+              </div>
+              <input placeholder="What's your favourite sneaker?" class="w-full max-md:rounded-full md:rounded-l-full md:w-[22rem] text-black font-primaryFont bg-slate-200 px-12 py-2 placeholder:text-slate-500  focus:outline-none focus:ring-1 focus:ring-black-dark focus:bg-black-dark focus:drop-shadow-lg"/>
+            </div>
+            <button class="font-primaryFont  max-md:rounded-full md:rounded-r-full px-3 py-2 bg-red-600 text-white text-[15px] font-medium shadow-md shadow-black-dark ease-linear duration-200 hover:bg-red-500 md:shadow-none md:w-20"> Buy </button>
+          </form>
+          <div class="flex flex-col gap-6  font-primaryFont">
+            <p> Accounted by: </p>
+            <ul class="flex justify-between items-center md:flex md:justify-start md:items-center md:gap-10">
+              <li class="flex flex-col items-center gap-2">
+                <i class="fa-brands fa-twitter text-xl"></i>
+                <a href="#" class="ease-linear hover:opacity-90 cursor-pointer">Twitter</a>
+              </li>
+              <li class="flex flex-col items-center gap-2">
+                <i class="fa-brands fa-google text-xl"></i>
+                <a href="#" class="ease-linear hover:opacity-90 cursor-pointer">Google</a>
+              </li>
+              <li class="flex flex-col items-center gap-2">
+                <i class="fa-brands fa-paypal text-xl"></i>
+                <a href="#" class="ease-linear hover:opacity-90 cursor-pointer">PayPal</a>
+              </li>
+              <li class="flex flex-col items-center gap-2">
+                <i class="fa-brands fa-instagram text-xl"></i>
+                <a href="#" class="ease-linear hover:opacity-90 cursor-pointer">Instagram</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr class="w-1/2 border-t-2 border-black-dark mx-auto my-10"/>
+
+      <section id="products" class="mb-6 scroll-mt-32">
+        <h1 class="text-center font-primaryFont text-4xl mb-10"> Products </h1>
+
+        <ul class="flex flex-wrap flex-col justify-center items-center font-primaryFont md:flex-row md:px-6 js-list-products">
+        </ul>
+      </section>
+
+      <hr class="w-1/2 border-t-2 border-black-dark mx-auto mt-10 mb-10"/>
+
+      <section id="contact" class="scroll-mt-24">
+        <h1 class="text-center font-primaryFont text-4xl"> Contact Us </h1>
+
+        <div class="px-4 flex justify-center items-center md:flex md:justify-center md:items-center lg:justify-between lg:items-center">
+
+          <div class="hidden lg:flex justify-center items-center lg:flex-1 lg:order-2 contact-img-transform">
+            <img src="image/contact.png" alt="contactbg" class="w-[400px] h-[550px]">
+          </div>
+
+          <div class="flex justify-center items-center lg:flex-1 lg:order-1 contact-form-transform">
+            <form action="" class="flex flex-col gap-6 px-4 py-4 font-primaryFont">
+              <div class="relative">
+                <div class="absolute top-1 left-1 p-2 bg-red-600 text-dull-white rounded-full flex justify-center items-center">
+                  <i class="fa-regular fa-user"></i>
+                </div>
+                <input type="text" placeholder="Username" class="w-96 md:w-[30rem] lg:w-96 px-10 py-2 rounded-full bg-slate-200 shadow-sm shadow-black-dark focus:outline-none focus:ring-1 focus:ring-black-dark focus:bg-black-dark focus:drop-shadow-lg placeholder:text-slate-500">
+              </div>
+    
+              <div class="relative">
+                <div class="absolute top-1 left-1 p-2 bg-red-600 text-dull-white rounded-full flex justify-center items-center">
+                  <i class="fa-regular fa-envelope-open"></i>
+                </div>
+                <input type="text" placeholder="Email Address" class="w-96 md:w-[30rem] lg:w-96 px-10 py-2 rounded-full bg-slate-200 shadow-sm shadow-black-dark focus:outline-none focus:ring-1 focus:ring-black-dark focus:bg-black-dark focus:drop-shadow-lg placeholder:text-slate-500">
+              </div>
+    
+              <div class="relative">
+                <div class="absolute top-1 left-1 p-2 bg-red-600 text-dull-white rounded-full flex justify-center items-center">
+                  <i class="fa-regular fa-message"></i>
+                </div>
+                <textarea type="text" placeholder="Message" cols="24" rows="10" class="w-96 md:w-[30rem] lg:w-96 px-10 py-2 rounded-md bg-slate-200 shadow-sm shadow-black-dark focus:outline-none focus:ring-1 focus:ring-black-dark focus:bg-black-dark focus:drop-shadow-lg placeholder:text-slate-500"></textarea>
+              </div>
+              <button class="w-full px-3 py-2 bg-red-600 rounded-md text-white ease-linear duration-200 hover:bg-red-500 md:w-[30rem] lg:w-24"> Enter </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="bg-red-600 footer-section-transform">
+
+      <section class="flex justify-around items-center gap-4 mx-auto my-0 p-4 text-white font-secondaryFont">
+        <address class="font-lato italic font-medium text-lg space-y-6 footer1-transform">
+          <h2>Yangon,Myanmar Address, Inc.</h2>
+          36Ways Lamataw City<br>
+          Pan Soe Tan 555-4588399<br>
+          Email: <a href="mailto:inquiries@acmerockets.com">vibeX@gmail.com</a><br>
+          Phone: <a href="tel:+15555555555">(959) 555-5555</a>
+      </address>
+
+       <ul class="hidden flex-col gap-4 lg:flex footer2-transform">
+        <li>
+          <a href="#home" class="hover:opacity-90 ease-linear duration-300"> Home </a>
+        </li>
+        <li>
+          <a href="#products" class="hover:opacity-90 ease-linear duration-300"> Products </a>
+        </li>
+        <li>
+          <a href="checkout.html" class="hover:opacity-90 ease-linear duration-300 js-footer-cart-quantity"> Carts(0) </a>
+        </li>
+        <li>
+          <a href="checkout.html" class="hover:opacity-90 ease-linear duration-300"> Contact </a>
+        </li>
+      </ul>
+
+      <ul class="hidden flex-col gap-4 lg:flex footer3-transform">
+        <li class="flex  gap-2 items-center">
+          <i class="fa-brands fa-twitter"></i>
+         <a href= "#" class="hover:opacity-90">Twitter</a>
+        </li>
+        <li class="flex  gap-2 items-center">
+          <i class="fa-brands fa-google"></i>
+          <a href="#" class="hover:opacity-90">Google</a>
+        </li>
+        <li class="flex  gap-2 items-center">
+          <i class="fa-brands fa-paypal"></i>
+          <a href="#" class="hover:opacity-90">PayPal</a>
+        </li>
+        <li class="flex  gap-2 items-center">
+          <i class="fa-brands fa-instagram"></i>
+          <a href="#" class="hover:opacity-90">Instagram</a>
+        </li>
+      </ul>
+
+      <div class="font-lato flex flex-col gap-4 mt-28 items-end footer4-transform">
+        <p class="text-right">Copyright &copy; by vibeX-Sneaker</p>
+        <p class="text-right font-bold italic"> Developed by &copy; Rai</p>
+      </div>
+      </section>
+
+    </footer>
+  </div>
+  
+  <script type="module" src="script/index.js"></script>
+  <script src="script/main.js"></script>
+  <script type="module" src="script/animate.js"></script>
+</body>
+</html>
